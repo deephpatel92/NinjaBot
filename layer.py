@@ -255,7 +255,7 @@ class EchoLayer(YowInterfaceLayer):
 
 # ----------------- Default function ----------------- 
     def default(self):
-        return str("Good to see !")
+        return str("Good to see you! Keep Rocking! \nNinjaBot coming soon!")
 
 
 
