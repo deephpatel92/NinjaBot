@@ -30,4 +30,4 @@ if __name__==  "__main__":
 
     stack.loop() #this is the program mainloop
 
-    YowsupConnectionManager.setAutoPong(True)
+    setAutoPong(True)
