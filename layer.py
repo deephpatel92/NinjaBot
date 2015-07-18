@@ -23,7 +23,15 @@ class EchoLayer(YowInterfaceLayer):
         if True:
             receipt = OutgoingReceiptProtocolEntity(messageProtocolEntity.getId(), messageProtocolEntity.getFrom())
 
-        user_keyword = messageProtocolEntity.getBody()        
+        user_keyword = messageProtocolEntity.getBody()   
+
+        # For youtube downloader, convert to lowercase if http found 
+        if "http" in user_keyword:
+            user_keyword = messageProtocolEntity.getBody()
+        else:
+            user_keyword = messageProtocolEntity.getBody().lower()
+
+        # Main function calls
         if user_keyword == "quote":
             response = ""
         elif user_keyword[0:2] == "tt":
