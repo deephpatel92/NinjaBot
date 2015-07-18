@@ -30,13 +30,13 @@ class EchoLayer(YowInterfaceLayer):
             response = self.get_tt(user_keyword)
         elif "fullform" or "Fullform" in user_keyword:
             response = self.get_fullform(user_keyword)
-        elif "gtu" in user_keyword:
+        elif "gtu" or "Gtu" in user_keyword:
             response = self.get_gtu_info(user_keyword)
-        elif "msg" in user_keyword:
+        elif "msg" or "Msg" in user_keyword:
             response = self.get_msg(user_keyword)
-        elif "tollfree" in user_keyword:
+        elif "tollfree" or "Tollfree" in user_keyword:
             response = self.get_tollfree(user_keyword)
-        elif "yt" in user_keyword.lower():
+        elif "yt" or "Yt" in user_keyword.lower():
             response = self.yt(user_keyword)
         elif "chemist" in user_keyword:
             response = self.get_chemist(user_keyword)
