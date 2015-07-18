@@ -30,5 +30,5 @@ if __name__==  "__main__":
 
     stack.loop() #this is the program mainloop
 
-    y = YowsupConnectionManager()
-    y.setAutoPong(True)
+#    y = YowsupConnectionManager()
+ #   y.setAutoPong(True)
