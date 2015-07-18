@@ -24,11 +24,11 @@ class EchoLayer(YowInterfaceLayer):
             receipt = OutgoingReceiptProtocolEntity(messageProtocolEntity.getId(), messageProtocolEntity.getFrom())
 
         user_keyword = messageProtocolEntity.getBody()        
-        if user_keyword == "quote":
+        if user_keyword == "quote" or "Quote":
             response = ""
-        elif user_keyword[0:2] == "tt":
+        elif user_keyword[0:2] == "tt" or "TT" or "Tt":
             response = self.get_tt(user_keyword)
-        elif "fullform" in user_keyword:
+        elif "fullform" or "Fullform" in user_keyword:
             response = self.get_fullform(user_keyword)
         elif "gtu" in user_keyword:
             response = self.get_gtu_info(user_keyword)
