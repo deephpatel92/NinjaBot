@@ -95,7 +95,7 @@ class EchoLayer(YowInterfaceLayer):
         final = ""
         split = text.split()
         if len(split) == 1:
-            final = "Please enter shortform."
+            final = "Please enter Fullform SPACE <shortform>."
         elif len(split) == 2:
             shortform = split[1]
             url = "https://api.import.io/store/data/243985c9-40aa-491e-9b0a-e3de4a7e32c5/_query?input/webpage/url=http%3A%2F%2Ffullforms.com%2F" + shortform + "&_user=5b5fd39b-293d-467a-96a3-ae991b8af88b&_apikey=5b5fd39b293d467a96a3ae991b8af88bf05390ea32dede72c808e95892bd1eff9549aed258aa36b1c0beca77e7d58f9efd66f8680ba152e7f7599f1e7056cd8f211ae67c876c4107da3a9e19a7b396ff"
@@ -135,7 +135,7 @@ class EchoLayer(YowInterfaceLayer):
                 total_bl = data["results"][0]["data"][7]
                 final = "Enrollment : " + enrollment_num + "\n\nName : " + name + "\n\nCollege : " + college + "\n\nBranch : " + branch + "\n\nYear of Admission : " + admission_year + "\n\nCPI : " + cpi + "\n\nCGPA : " + cgpa + "\n\nBacklogs : " + total_bl
         else:
-            final = "Please enter enrollment number."
+            final = "Please enter gtu SPACE <enrollment number>"
         return str(final)
 
 # ----------------- Love function -----------------
@@ -151,7 +151,7 @@ class EchoLayer(YowInterfaceLayer):
                 }
         cut = text.split()
         if len(cut) == 1:
-            final = "Please provide sms type and try again!"
+            final = "Please provide msg SPACE <love, friendship, quote, funny, special, story>"
         elif len(cut) == 2:
             msg_type = cut[1].lower()
             if msg_type in info:
@@ -197,7 +197,7 @@ class EchoLayer(YowInterfaceLayer):
         final = ""
         cut = text.split()
         if len(cut) == 1:
-            final = "Please provide URL of video."
+            final = "Please type yt SPACE <URL>"
         elif len(cut) == 2:
             URL = cut[1]
             if "http://" in URL or "https://" in URL:
