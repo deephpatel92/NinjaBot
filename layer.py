@@ -255,7 +255,9 @@ class EchoLayer(YowInterfaceLayer):
 
 # ----------------- Default function ----------------- 
     def default(self):
-        return str("Good to see you! Keep Rocking! \nNinjaBot coming soon!")
+        return str("Welcome to NinjaBot! \n\n Services currently available: \n 1. Dictionary \n 2. Youtube Downloader 
+                    \n 3. Fullforms \n 4. Tollfree Numbers \n 5. GTU information \n 6. Messages \n\n Send "More" for other services
+                    or visit: www.ninjabot.in)
 
 
 
